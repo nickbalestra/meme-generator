@@ -1,7 +1,34 @@
 <html>
   <head></head>
+  <style>
+  .grid {
+    display: flex;                       /* establish flex container */
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: space-around;
+  }
+  .cell {
+    flex: 0 0 50%;                       /* don't grow, don't shrink, width */
+    height: 50px;
+    margin-bottom: 5px;
+    background-color: #999;
+  }
+  .cell:nth-child(3n) {
+    background-color: #F00;
+  }
+  </style>
   <body>
+    <div class="grid">
+  <div class="cell">
     <oc-component href="http://oc-registry.herokuapp.com/meme-generator/1.X.X"></oc-component>
-    <script src="http://oc-registry.herokuapp.com/oc-client/client.js"></script>
+    <script src="http://oc-registry.herokuapp.com/oc-client/client.js"></script>    
+  </div>
+  <div class="cell">
+   <oc-component href="http://oc-registry.herokuapp.com/meme-generator/2.X.X"></oc-component>
+    <script src="http://oc-registry.herokuapp.com/oc-client/client.js"></script>   
+   </div>
+</div>
+    
   </body>
 </html>
+
+
